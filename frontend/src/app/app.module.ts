@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -33,39 +33,32 @@ import { LinechartComponent } from './components/linechart/linechart.component';
 import { GroupchartComponent } from './components/groupchart/groupchart.component';
 import { CockpittableComponent } from './components/cockpittable/cockpittable.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    RegisterComponent,
-    HomeComponent,
-    ECockpitComponent,
-    DashboardComponent,
-    PiechartComponent,
-    LinechartComponent,
-    GroupchartComponent,
-    CockpittableComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    AppRoutingModule,
-    MatInputModule,
-    MatFormFieldModule,
-    FormsModule, 
-    ReactiveFormsModule,
-    NgIf,
-    NgxChartsModule,
-    BrowserAnimationsModule,
-    MatTableModule,
-    MatTableModule, 
-    MatPaginatorModule,
-    MatStepperModule,
-    MatTabsModule,
-    MatOptionModule
-  ],
-  providers: [AuthService],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        LoginComponent,
+        RegisterComponent,
+        HomeComponent,
+        ECockpitComponent,
+        DashboardComponent,
+        PiechartComponent,
+        LinechartComponent,
+        GroupchartComponent,
+        CockpittableComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        FormsModule,
+        AppRoutingModule,
+        MatInputModule,
+        MatFormFieldModule,
+        FormsModule,
+        ReactiveFormsModule,
+        NgIf,
+        NgxChartsModule,
+        BrowserAnimationsModule,
+        MatTableModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatStepperModule,
+        MatTabsModule,
+        MatOptionModule], providers: [AuthService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }

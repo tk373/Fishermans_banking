@@ -1879,3 +1879,5 @@
 {"from":"1000002","target":"1000003","amount":-46,"total":1207,"category":"electronics","date":{"$$date":1544369818332},"_id":"zvNX66zoxw7Wm1Xw"}
 {"from":"1000002","target":"1000003","amount":-1,"total":1215,"category":"media","date":{"$$date":1540039018332},"_id":"zxUPqvSzxW3oM10s"}
 {"from":"1000002","target":"1000003","amount":8,"total":193,"category":"media","date":{"$$date":1541896618332},"_id":"zylfQkiYRweFQ7ll"}
+{"from":"1000004","target":"1000003","amount":-200,"total":800,"category":"furniture","date":{"$$date":1743774691013},"_id":"nd2hn9VbFG1gS3Jl"}
+{"from":"1000004","target":"1000003","amount":200,"total":2293,"category":"furniture","date":{"$$date":1743774691016},"_id":"nPVGXbD2OoaXMcWo"}

@@ -3,3 +3,5 @@
 {"ownerId":"ptjaqDODYg3kG5MR","accountNr":"1000002","amount":1378.02,"_id":"CfC4VUyCfciY6lvC"}
 {"ownerId":"o8GL2UiYzYSNgfHU","accountNr":"1000003","amount":2093,"_id":"D8PDxDQoTeExrDpw"}
 {"$$indexCreated":{"fieldName":"accountNr","unique":true,"sparse":true}}
+{"ownerId":"hjMTb2bqxoBO7TzO","accountNr":"1000004","amount":800,"_id":"0GjVbicy4kgrvVuH"}
+{"ownerId":"o8GL2UiYzYSNgfHU","accountNr":"1000003","amount":2293,"_id":"D8PDxDQoTeExrDpw"}
