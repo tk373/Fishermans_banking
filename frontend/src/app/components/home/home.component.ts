@@ -29,6 +29,7 @@ export class HomeComponent{
   userName: string | null;
   useracc: Account | null = null;
   jwtToken!: string;
+  isMenuOpen = false;
   
   
   constructor(private router: Router){
@@ -53,5 +54,13 @@ export class HomeComponent{
   logout(): void {
     localStorage.clear();
     this.router.navigate(['/login']);
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = true;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
   }
 }

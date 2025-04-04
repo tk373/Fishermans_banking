@@ -1,12 +1,14 @@
 .e-cockpit {
   font-family: 'Arial', sans-serif;
-  max-width: 1200px; /* Adjust based on your layout */
-  margin: 0 auto; /* Center align the container */
+  width: 100%;
+  margin: 0 auto;
   margin-top: 10px;
-  padding: 20px;
-  background-color: #f4f4f4; /* Light background for the container */
+  padding: 10px;
+  background-color: #f4f4f4;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* Tabs Styling */
@@ -14,35 +16,50 @@
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 100%;
 }
 
 .mat-tab-label {
-  color: #333333; /* Dark text for better readability */
+  color: #333333;
   font-weight: 600;
+  min-width: 0;
+  padding: 0 12px;
 }
 
 .mat-tab-label-active {
-  color: #4CAF50; /* Highlight color for active tab */
+  color: #4CAF50;
 }
-
 
 /* Filter Section and Pagination Styling */
-.filter-section, .pagination {
-  margin-top: 20px;
+.filter-section {
+  margin: 20px 10px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   align-items: center;
-  justify-content: space-between;
 }
 
-.filter-section select, .entries-per-page input {
-  margin: 5px;
+.filter-section select {
+  flex: 1;
+  min-width: 150px;
   padding: 8px;
   border-radius: 4px;
   border: 1px solid #ccc;
+  background-color: white;
+}
+
+.pagination {
+  margin: 20px 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 /* Button Styling */
-.page-button, .entries-per-page button {
+.page-button {
   background-color: #4CAF50;
   color: white;
   border: none;
@@ -50,38 +67,141 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.2s;
+  min-width: 40px;
 }
 
-.page-button:hover, .entries-per-page button:hover {
+.page-button:hover {
   background-color: #367c39;
 }
 
-/* Responsive Layout Adjustments */
-@media (max-width: 768px) {
-  .filter-section, .pagination {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+/* Entries per page section */
+.entries-per-page {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+  white-space: nowrap;
+}
+
+.entries-per-page label {
+  white-space: nowrap;
+}
+
+.entries-per-page input {
+  width: 60px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
 .mat-tab-body-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Adjust the height as necessary */
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.pieChartDIv{
-  height: 80vh;
-  width: 100vw;
+/* Chart containers */
+.pieChartDIv, .lineChartData {
+  width: 100%;
+  max-width: 100%;
+  height: 40vh;
+  display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.lineChartData{
-  margin-left: 50px;
-  height: 90vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
+/* Chart size adjustments */
+::ng-deep .chart-container {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+::ng-deep .chart {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+/* Form field styling */
+.mat-form-field {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 768px) {
+  .e-cockpit {
+    padding: 5px;
+    margin-top: 5px;
+  }
+
+  .filter-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-section select {
+    width: 100%;
+  }
+
+  .pagination {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+
+  .entries-per-page {
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    margin: 0 10px;
+  }
+
+  .entries-per-page input {
+    width: 60px;
+    max-width: 60px;
+  }
+
+  .mat-tab-label {
+    padding: 0 8px;
+    font-size: 12px;
+  }
+
+  .pieChartDIv, .lineChartData {
+    height: 35vh;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .e-cockpit {
+    padding: 5px;
+  }
+
+  .mat-tab-label {
+    padding: 0 4px;
+    font-size: 11px;
+  }
+
+  .page-button {
+    padding: 6px 12px;
+  }
+
+  .pieChartDIv, .lineChartData {
+    height: 30vh;
+    padding: 0;
+  }
 }

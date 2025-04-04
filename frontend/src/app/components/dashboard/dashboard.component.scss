@@ -54,101 +54,119 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
-  }
-  
-  .new-payment-container,
-  .latest-transactions-container {
-    width: 48%;
-  }
-  
-  .new-payment-container form,
-  .latest-transactions-container table {
-    width: 100%;
-    margin-top: 20px;
-  }
-  
-  .new-payment-container h2,
-  .latest-transactions-container h2 {
-    font-size: 1.5rem;
-    margin-bottom: 16px;
-  }
-  
-  .new-payment-container label,
-  .latest-transactions-container th {
-    margin-bottom: 8px;
-  }
-  
-  .new-payment-container input,
-  .new-payment-container button,
-  .latest-transactions-container td,
-  .latest-transactions-container th {
+    gap: 20px;
+    flex-wrap: wrap;
     width: 100%;
     box-sizing: border-box;
-  }
-  
-  .new-payment-container button,
-  .latest-transactions-container table {
+}
+
+.new-payment-container,
+.latest-transactions-container {
+    width: 48%;
+    min-width: 300px;
+    box-sizing: border-box;
+}
+
+.new-payment-container form,
+.latest-transactions-container table {
+    width: 100%;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.new-payment-container h2,
+.latest-transactions-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.new-payment-container label,
+.latest-transactions-container th {
+    margin-bottom: 8px;
+}
+
+.new-payment-container input,
+.new-payment-container button,
+.latest-transactions-container td,
+.latest-transactions-container th {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.new-payment-container button,
+.latest-transactions-container table {
     margin-top: 16px;
-  }
-  
-  .latest-transactions-container table {
+}
+
+.latest-transactions-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.latest-transactions-container table {
     border-collapse: collapse;
     width: 100%;
-  }
-  
-  .latest-transactions-container th,
-  .latest-transactions-container td {
+    min-width: 100%;
+}
+
+.latest-transactions-container th,
+.latest-transactions-container td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
-  }
-  
-  .latest-transactions-container th {
+    min-width: 80px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.latest-transactions-container th {
     background-color: #4caf50;
     color: white;
-  }
+}
 
-  .new-payment-container form {
+.new-payment-container form {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 16px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  
-  .new-payment-container input {
-    width: calc(100% - 20px); /* Adjusting for input padding and border */
-    //box-sizing: border-box;
-  }
-  
-  .new-payment-container button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.new-payment-container input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.new-payment-container button {
     background-color: #4caf50;
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 90%;
-  }
+    width: 100%;
+}
 
-  
-  .new-payment-container button:hover {
+.new-payment-container button:hover {
     background-color: #45a049;
-  }
+}
 
-  .example-full-width {
+.example-full-width {
     width: 100%;
     height: auto;
     margin-top: 12px;
-  }
+}
 
-  table {
+table {
     width: 100%;
-  }
+}
 
-  .green-button {
-    background-color: #4CAF50; /* A nicer shade of green */
+.green-button {
+    background-color: #4CAF50;
     color: white;
     border: none;
     margin-top: 3px;
@@ -159,10 +177,81 @@
     text-transform: uppercase;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-  }
+    width: 100%;
+}
 
-  .green-button:hover {
-    background-color: #45a049; /* A slightly darker green for hover */
-    transform: translateY(-2px); /* Slight raise effect */
-  }
+.green-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .new-payment-container,
+    .latest-transactions-container {
+        width: 100%;
+        min-width: unset;
+        margin-bottom: 20px;
+    }
+
+    .latest-transactions-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .latest-transactions-container table {
+        min-width: 100%;
+    }
+
+    .new-payment-container form {
+        padding: 12px;
+    }
+
+    .example-full-width {
+        margin-top: 8px;
+    }
+
+    .green-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .latest-transactions-container th,
+    .latest-transactions-container td {
+        min-width: 60px;
+        max-width: 120px;
+        padding: 6px;
+        font-size: 14px;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    .content-container {
+        padding: 8px;
+    }
+
+    .new-payment-container h2,
+    .latest-transactions-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .latest-transactions-container th,
+    .latest-transactions-container td {
+        padding: 4px;
+        font-size: 12px;
+        min-width: 50px;
+        max-width: 100px;
+    }
+
+    .new-payment-container form {
+        padding: 10px;
+    }
+}
   
