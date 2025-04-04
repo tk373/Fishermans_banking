@@ -2,6 +2,8 @@ import Datastore from 'nedb';
 import {resultUtil} from '../util/resultUtil.js';
 import {toQuery, toCountedQuery} from '../util/dbUtil.js';
 import {config} from '../config.js';
+// Import the compatibility layer
+import '../util/nedb-compat.js';
 
 const db = new Datastore(config.db.inMemory ? {} : {filename: config.db.dbPath.accounts, autoload: true});
 

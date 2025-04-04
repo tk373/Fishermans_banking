@@ -44,18 +44,33 @@ async function createTransaction() {
 
 export const dataSeed = {
     async insertSeedData() {
-        if (!await userService.tryGetByLogin(initialAccountData[0].login)) {
-            for (let initialData of initialAccountData) {
-                const account = await userService.register(
-                    initialData.login,
-                    initialData.firstname,
-                    initialData.lastname,
-                    initialData.password,
-					startDate);
+        try {
+            if (!await userService.tryGetByLogin(initialAccountData[0].login)) {
+                for (let initialData of initialAccountData) {
+                    try {
+                        const account = await userService.register(
+                            initialData.login,
+                            initialData.firstname,
+                            initialData.lastname,
+                            initialData.password,
+                            startDate);
 
-                initialData.accountNr = account.accountNr;
+                        initialData.accountNr = account.accountNr;
+                    } catch (error) {
+                        console.error(`Failed to register user ${initialData.login}:`, error);
+                        throw error;
+                    }
+                }
+                try {
+                    await createTransaction();
+                } catch (error) {
+                    console.error('Failed to create transactions:', error);
+                    throw error;
+                }
             }
-            await createTransaction();
+        } catch (error) {
+            console.error('Failed to insert seed data:', error);
+            throw error;
         }
     }
 };

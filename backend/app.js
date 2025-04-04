@@ -24,7 +24,12 @@ log("Booting up, please wait...");
 console.log('Booting up, please wait...');
 
 // Seed the database
-dataSeed.insertSeedData();
+try {
+    await dataSeed.insertSeedData();
+} catch (error) {
+    console.error('Failed to seed database:', error);
+    // Don't throw here - we want the server to start even if seeding fails
+}
 
 /**
  * Middleware registration

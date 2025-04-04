@@ -4,6 +4,8 @@ import {toQuery, toCountedQuery} from '../util/dbUtil.js';
 import {config} from '../config.js';
 import {cryptoUtil} from '../util/cryptoUtil.js';
 import {accountService} from './accountService.js';
+// Import the compatibility layer
+import '../util/nedb-compat.js';
 
 const db = new Datastore(config.db.inMemory ? {} : {filename: config.db.dbPath.users, autoload: true});
 

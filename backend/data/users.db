@@ -1,4 +1,5 @@
 {"login":"user1","firstname":"Bob","lastname":"Müller","passwordHash":"879e0a6c3793565633ce410c15da9c6d0ab417dd627274e1e28e577a3f247ef6","accountNr":"1000001","_id":"GkXnHq6cxFtmOWkD"}
+{"login":"admin","firstname":"admin","lastname":"admin","passwordHash":"327cef3f99f2ff1d5f61afcb63e8d45830c546a88887b7613bd0d1d3d3fdfae7","accountNr":"1000004","_id":"hjMTb2bqxoBO7TzO"}
 {"login":"user3","firstname":"Kevin","lastname":"Schmidt","passwordHash":"879e0a6c3793565633ce410c15da9c6d0ab417dd627274e1e28e577a3f247ef6","accountNr":"1000003","_id":"o8GL2UiYzYSNgfHU"}
 {"login":"user2","firstname":"Lisa","lastname":"Meier","passwordHash":"879e0a6c3793565633ce410c15da9c6d0ab417dd627274e1e28e577a3f247ef6","accountNr":"1000002","_id":"ptjaqDODYg3kG5MR"}
 {"$$indexCreated":{"fieldName":"login","unique":true,"sparse":true}}

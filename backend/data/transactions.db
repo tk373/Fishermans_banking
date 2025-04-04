@@ -1390,6 +1390,7 @@
 {"from":"1000003","target":"1000002","amount":31,"total":1422,"category":"beauty_health","date":{"$$date":1534261018332},"_id":"jy6flzu18UtzCxHJ"}
 {"from":"1000002","target":"1000001","amount":4,"total":1566,"category":"media","date":{"$$date":1545406618332},"_id":"jzKY19BFjKZf2Jwv"}
 {"from":"1000003","target":"1000002","amount":26,"total":1076,"category":"electronics","date":{"$$date":1538602618332},"_id":"jzw6rfgNTgHpzCJ3"}
+{"from":"00000000","target":"1000004","amount":1000,"date":{"$$date":1743774220560},"_id":"k1V0MQ8KbCxjwtuR"}
 {"from":"1000002","target":"1000001","amount":-8,"total":1213,"category":"electronics","date":{"$$date":1539779818332},"_id":"k6NwuqlyoBnRYGR5"}
 {"from":"1000002","target":"1000001","amount":-50,"total":1370,"category":"living","date":{"$$date":1534714618332},"_id":"k7GeYKvEHCvlnrc6"}
 {"from":"1000003","target":"1000001","amount":-38,"total":226,"category":"mobility","date":{"$$date":1542501418332},"_id":"kD0G5cij1IwTx77b"}
