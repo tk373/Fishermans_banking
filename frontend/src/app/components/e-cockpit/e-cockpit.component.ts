@@ -5,9 +5,10 @@ import { TransactionConfirmation } from 'src/app/services/transaction.service';
 import { MyErrorStateMatcher } from '../home/home.component';
 
 @Component({
-  selector: 'app-e-cockpit',
-  templateUrl: './e-cockpit.component.html',
-  styleUrls: ['./e-cockpit.component.scss']
+    selector: 'app-e-cockpit',
+    templateUrl: './e-cockpit.component.html',
+    styleUrls: ['./e-cockpit.component.scss'],
+    standalone: false
 })
 export class ECockpitComponent implements OnInit {
   totalAmount: number = 0; //Varibale for the displayed amount

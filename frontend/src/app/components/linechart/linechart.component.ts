@@ -4,9 +4,10 @@ import { Ecockpit } from 'src/app/services/e-cockpit.service';
 import { TransactionConfirmation } from 'src/app/services/transaction.service';
 
 @Component({
-  selector: 'app-linechart',
-  templateUrl: './linechart.component.html',
-  styleUrls: ['./linechart.component.scss']
+    selector: 'app-linechart',
+    templateUrl: './linechart.component.html',
+    styleUrls: ['./linechart.component.scss'],
+    standalone: false
 })
 export class LinechartComponent implements OnChanges{
   

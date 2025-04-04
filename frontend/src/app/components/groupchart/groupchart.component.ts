@@ -4,9 +4,10 @@ import { Ecockpit } from 'src/app/services/e-cockpit.service';
 import { TransactionConfirmation } from 'src/app/services/transaction.service';
 
 @Component({
-  selector: 'app-groupchart',
-  templateUrl: './groupchart.component.html',
-  styleUrls: ['./groupchart.component.scss']
+    selector: 'app-groupchart',
+    templateUrl: './groupchart.component.html',
+    styleUrls: ['./groupchart.component.scss'],
+    standalone: false
 })
 export class GroupchartComponent implements OnChanges{
   chartData: any[] = [];

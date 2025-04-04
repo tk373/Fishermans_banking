@@ -2,9 +2,10 @@ import { Component, Input, SimpleChanges } from '@angular/core';
 import { TransactionConfirmation } from 'src/app/services/transaction.service';
 
 @Component({
-  selector: 'app-cockpittable',
-  templateUrl: './cockpittable.component.html',
-  styleUrls: ['./cockpittable.component.scss']
+    selector: 'app-cockpittable',
+    templateUrl: './cockpittable.component.html',
+    styleUrls: ['./cockpittable.component.scss'],
+    standalone: false
 })
 export class CockpittableComponent {
   @Input()

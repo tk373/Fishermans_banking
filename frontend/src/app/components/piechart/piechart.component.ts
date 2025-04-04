@@ -4,9 +4,10 @@ import { Ecockpit, Month, ChartData } from 'src/app/services/e-cockpit.service';
 import { TransactionConfirmation } from 'src/app/services/transaction.service';
 
 @Component({
-  selector: 'app-piechart',
-  templateUrl: './piechart.component.html',
-  styleUrls: ['./piechart.component.scss']
+    selector: 'app-piechart',
+    templateUrl: './piechart.component.html',
+    styleUrls: ['./piechart.component.scss'],
+    standalone: false
 })
 export class PiechartComponent implements OnChanges{
   pieChartData: any[] = [];
